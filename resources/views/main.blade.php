@@ -8,13 +8,19 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
 
-        @vite('resources/js/app.js')
+        @include('partials.head-imports')
 
     </head>
 
     <body>
 
-        <header><h1>funziona</h1></header>
+        @include('partials.header')
+
+        <main>
+
+            @yield('main-content')
+
+        </main>
 
         
     </body>
