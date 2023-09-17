@@ -189,6 +189,8 @@ main{
 
                             object-fit: cover;
 
+                            object-position: top ;
+
                         }
 
                     }
@@ -318,6 +320,8 @@ main{
                     align-items: center;
 
                     background-color:  rgb(4, 119, 242);
+
+                    cursor: pointer;
         
                     a{
 
