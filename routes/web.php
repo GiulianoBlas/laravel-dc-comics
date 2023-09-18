@@ -20,4 +20,6 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class  , 'home'])->name('partials.home');
 
+Route::get('/comic/{comic}', [MainController::class  , 'singleComic'])->name('partials.single-comic');
+
 Route::resource('comics', ComicController::class);
