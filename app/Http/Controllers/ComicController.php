@@ -34,6 +34,55 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         
+
+        $request->validate([
+
+            'title' => 'required|max:128',
+
+            'description' => 'required',
+
+            'thumb'=> 'nullable',
+
+            'price' => 'required|numeric|max:999.99',
+
+            'series'=> 'required|max:128|min:0|max:1000',
+
+            'sale_date' => 'nullable|date',
+
+            'type' => 'required|max:50',
+
+            'artists' => 'required',
+
+            'writers' => 'required',
+
+        ],
+        [
+
+            'title.required' => 'Il titolo é obbligatorio',
+
+            'title.max' => 'Il titolo puó avere al massimo 128 caratteri',
+
+            'description.required' => 'La descrizione é obbligatoria',
+
+            'price.required' => 'Il prezzo é obbligatorio',
+
+            'price.max' => 'Prezzo massimo 999.99',
+
+            'series.required' => 'La serie é obbligatoria',
+
+            'series.max' => 'La serie puó avere al massimo 128 caratteri',
+
+            'sale_date.date' => 'Inserisci una data valida',
+
+            'type.required' => 'Il tipo é obbligatorio',
+
+            'artist.required' => 'Campo obbligatorio',
+
+            'writers.required' => 'Campo obbligaotiro'
+
+        ]
+        );
+
         $formData = $request -> all();
 
         $newComic = new Comic;
@@ -87,7 +136,56 @@ class ComicController extends Controller
     // Update the specified resource in storage.
      
     public function update(Request $request, string $id)
-    {
+    {   
+
+
+        $request->validate([
+
+            'title' => 'required|max:128',
+
+            'description' => 'required',
+
+            'thumb'=> 'nullable',
+
+            'price' => 'required|numeric|max:999.99',
+
+            'series'=> 'required|max:128|min:0|max:1000',
+
+            'sale_date' => 'nullable|date',
+
+            'type' => 'required|max:50',
+
+            'artists' => 'required',
+
+            'writers' => 'required',
+
+        ],
+        [
+
+            'title.required' => 'Il titolo é obbligatorio',
+
+            'title.max' => 'Il titolo puó avere al massimo 128 caratteri',
+
+            'description.required' => 'La descrizione é obbligatoria',
+
+            'price.required' => 'Il prezzo é obbligatorio',
+
+            'price.max' => 'Prezzo massimo 999.99',
+
+            'series.required' => 'La serie é obbligatoria',
+
+            'series.max' => 'La serie puó avere al massimo 128 caratteri',
+
+            'sale_date.date' => 'Inserisci una data valida',
+
+            'type.required' => 'Il tipo é obbligatorio',
+
+            'artist.required' => 'Campo obbligatorio',
+
+            'writers.required' => 'Campo obbligaotiro'
+
+        ]
+        );
         
         $comic = Comic::findOrFail($id);
 
