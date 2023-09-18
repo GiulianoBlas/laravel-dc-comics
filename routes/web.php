@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ComicController;
 
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,6 @@ use App\Http\Controllers\ComicController;
 */
 
 
-Route::get('/', [ComicController :: class , 'home'])->name('partials.home');
+Route::get('/', [MainController::class  , 'home'])->name('partials.home');
 
 Route::resource('comics', ComicController::class);
