@@ -322,6 +322,23 @@ main{
                     background-color:  rgb(4, 119, 242);
 
                     cursor: pointer;
+
+                    &:hover{
+
+                        border: .1875rem solid rgb(4, 119, 242);
+
+                        color: rgb(4, 119, 242);
+
+                        background-color: white;
+
+                    }
+
+                    &:hover a{
+
+                        color: rgb(4, 119, 242);
+
+                    }
+
         
                     a{
 
