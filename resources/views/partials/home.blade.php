@@ -8,7 +8,7 @@
 
         @foreach ($comics as $comic)
 
-        <a href="{{route('comics.show', ['comic'=> $comic->id])}}">
+        <a href="{{route('partials.single-comic', ['comic'=> $comic->id])}}">
             
             <div class="comic-slot">
 
