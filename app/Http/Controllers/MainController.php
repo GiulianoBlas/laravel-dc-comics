@@ -20,5 +20,13 @@ class MainController extends Controller
 
     }
 
-    
+    public function singleComic(string $id)
+    {
+
+        $comic = Comic::findOrFail($id);
+
+        return view('partials.single-comic', compact('comic'));
+
+    }
+
 }
