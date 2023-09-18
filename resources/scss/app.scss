@@ -278,6 +278,7 @@ main{
                 color: rgba(4, 119, 242, 0.827);
 
                 tr{
+
                    
                     th{
 
@@ -292,6 +293,14 @@ main{
                         padding: .3125rem;
 
                         border-radius: .625rem;
+
+                    }
+
+                    td{
+
+                        width: calc(100% / 8);
+
+                        word-break: break-all;
 
                     }
 
@@ -589,6 +598,65 @@ main{
 
         height: 100%;
 
+        position: relative;
+
+        .validation-warning{
+
+            border: 1px solid white;
+
+            position: absolute;
+
+            left:1.5625rem;
+
+            top:4.0625rem;
+
+            width: 11.875rem;
+
+            max-height: 37.5rem;
+
+            padding: .3125rem;
+
+            border-radius: .3125rem;
+
+            background-color: rgba(255, 0, 0, 0.506);
+
+            h4{
+
+                padding: .3125rem;
+
+                text-transform: uppercase;
+            
+            }
+           
+            ul{
+
+                
+
+                color: white;
+
+                max-height: 31.25rem;
+
+                overflow-y: auto;
+
+
+                li{
+
+                    border-bottom: 1px solid white;
+
+                    margin-bottom: .3125rem;
+
+                    &::fisrt{
+
+                        text-transform: uppercase;
+
+                    }
+
+                }
+                               
+            }
+
+        }
+
         form{
 
             display: flex;
@@ -689,7 +757,7 @@ main{
 
                         padding-inline: .625rem;
 
-                        border:  1px solid white;
+                        border:  .1875rem solid white;
                         
                     }
 
@@ -704,6 +772,8 @@ main{
                             background-color: white;
 
                             color: rgb(4, 119, 242) ;
+
+                            border: .1875rem solid rgb(4, 119, 242) ;
 
                             cursor: pointer;
                         }
@@ -721,6 +791,8 @@ main{
                             background-color: white;
 
                             color:  rgb(255, 179, 0) ;
+
+                            border: .1875rem solid rgb(255, 179, 0);
 
                             cursor: pointer;
                         }
