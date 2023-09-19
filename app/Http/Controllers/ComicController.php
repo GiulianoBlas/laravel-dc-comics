@@ -76,9 +76,11 @@ class ComicController extends Controller
 
             'type.required' => 'Il tipo é obbligatorio',
 
-            'artist.required' => 'Campo obbligatorio',
+            'type.max' => 'Il tipo puo avere al massimo 50 caratteri',
 
-            'writers.required' => 'Campo obbligaotiro'
+            'artists.required' => 'Inserisci artista/i',
+
+            'writers.required' => 'Inserisci scrittore/i',
 
         ]
         );
@@ -180,9 +182,11 @@ class ComicController extends Controller
 
             'type.required' => 'Il tipo é obbligatorio',
 
-            'artist.required' => 'Campo obbligatorio',
+            'type.max' => 'Il tipo puo avere al massimo 50 caratteri',
 
-            'writers.required' => 'Campo obbligaotiro'
+            'artists.required' => 'Inserisci artista/i',
+
+            'writers.required' => 'Inserisci scrittore/i',
 
         ]
         );
